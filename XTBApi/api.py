@@ -13,6 +13,7 @@ import inspect
 import json
 import logging
 import time
+import pdb
 from datetime import datetime
 
 from websocket import create_connection
@@ -335,6 +336,7 @@ class BaseClient(object):
             'tp': take_profit
         }
         info.update(kwargs)  # update with kwargs parameters
+        pdb.set_trace()
         print(info)
         data = _get_data("tradeTransaction", tradeTransInfo=info)
         print(data)
