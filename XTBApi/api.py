@@ -124,6 +124,7 @@ class BaseClient(object):
 
     def _send_command(self, dict_data):
         """send command to api"""
+        pdb.set_trace()
         time_interval = time.time() - self._time_last_request
         self.LOGGER.debug("took {} s.".format(time_interval))
         if time_interval < MAX_TIME_INTERVAL:
@@ -336,10 +337,10 @@ class BaseClient(object):
             'tp': take_profit
         }
         info.update(kwargs)  # update with kwargs parameters
-        pdb.set_trace()
-        print(info)
+        #pdb.set_trace()
+        #print(info)
         data = _get_data("tradeTransaction", tradeTransInfo=info)
-        print(data)
+        #print(data)
         name_of_mode = [x.name for x in MODES if x.value == mode][0]
         name_of_type = [x.name for x in TRANS_TYPES if x.value ==
                         trans_type][0]
