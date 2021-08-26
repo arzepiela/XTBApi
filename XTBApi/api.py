@@ -124,7 +124,7 @@ class BaseClient(object):
 
     def _send_command(self, dict_data):
         """send command to api"""
-        pdb.set_trace()
+        #pdb.set_trace()
         time_interval = time.time() - self._time_last_request
         self.LOGGER.debug("took {} s.".format(time_interval))
         if time_interval < MAX_TIME_INTERVAL:
